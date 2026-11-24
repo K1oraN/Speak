@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "script_id": "3f320c40-2d4f-4311-bdff-a6396d678310",
+  "language": "Francês",
+  "level": "A2",
+  "scenario": "Restaurante",
+  "title": "Restaurante",
+  "description": "Prática de reserva, pedido e pagamento.",
+  "estimated_minutes": 10,
+  "steps": [
+    {
+      "id": "1",
+      "context": "Chegada",
+      "tutor_text": "Vous avez une réservation ?",
+      "tutor_translation_pt": "Você tem uma reserva?",
+      "tutor_pronunciation_pt": "Vu zavê ün rezérvassion?",
+      "student_suggestion": "Oui, j’ai une réservation.",
+      "student_translation_pt": "Sim, tenho uma reserva.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "2",
+      "context": "Bebidas",
+      "tutor_text": "Vous désirez boire quelque chose ?",
+      "tutor_translation_pt": "Deseja beber algo?",
+      "tutor_pronunciation_pt": "Vu dezirê buár kélk shôz?",
+      "student_suggestion": "Une bouteille d’eau, s’il vous plaît.",
+      "student_translation_pt": "Uma garrafa de água, por favor.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "3",
+      "context": "Pedido",
+      "tutor_text": "Vous êtes prêt à commander ?",
+      "tutor_translation_pt": "Está pronto para pedir?",
+      "tutor_pronunciation_pt": "Vu zét pré a komandê?",
+      "student_suggestion": "Je voudrais une soupe.",
+      "student_translation_pt": "Gostaria de uma sopa.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "4",
+      "context": "Complementos",
+      "tutor_text": "Autre chose ?",
+      "tutor_translation_pt": "Mais alguma coisa?",
+      "tutor_pronunciation_pt": "Ôtr shôz?",
+      "student_suggestion": "Non, merci.",
+      "student_translation_pt": "Não, obrigado.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "5",
+      "context": "Refeição",
+      "tutor_text": "Tout s’est bien passé ?",
+      "tutor_translation_pt": "Correu tudo bem?",
+      "tutor_pronunciation_pt": "Tu sé biãn passê?",
+      "student_suggestion": "Oui, merci.",
+      "student_translation_pt": "Sim, obrigado.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "6",
+      "context": "Pagamento",
+      "tutor_text": "Vous voulez l’addition ?",
+      "tutor_translation_pt": "Quer a conta?",
+      "tutor_pronunciation_pt": "Vu vulê ladission?",
+      "student_suggestion": "L’addition, s’il vous plaît.",
+      "student_translation_pt": "A conta, por favor.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    }
+  ],
+  "tutor_instructions": "Aceite respostas equivalentes; espere uma resposta antes de avançar."
+}

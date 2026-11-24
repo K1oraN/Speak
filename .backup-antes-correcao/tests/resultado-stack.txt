@@ -1,0 +1,4 @@
+npm run typecheck: falhou (dependências ausentes; TS2307, incluindo react e react-router-dom).
+npm run lint: falhou (eslint: not found).
+npm run build: falhou na etapa tsc; Vite não executado.
+npm install/package-lock: bloqueado pelo acesso ao registry; lockfile não gerado.

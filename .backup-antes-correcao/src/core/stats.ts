@@ -1,0 +1,4 @@
+export function average(values:(number|null|undefined)[]){const valid=values.filter((x):x is number=>typeof x==='number'&&Number.isFinite(x));return {value:valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null,count:valid.length,total:values.length};}
+export function xpRule(seconds:number,turns:number,usedToday:number){return Math.max(0,Math.min(200-usedToday,100,Math.floor(seconds/60)*5+turns*2));}
+export function localDay(date:Date,tz:string){const parts=new Intl.DateTimeFormat('en-CA',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);return ['year','month','day'].map(k=>parts.find(p=>p.type===k)?.value).join('-');}
+export function streak(days:string[],today:string){const set=new Set(days);const d=new Date(today+'T12:00:00Z');if(!set.has(today))d.setUTCDate(d.getUTCDate()-1);let n=0;while(set.has(d.toISOString().slice(0,10))){n++;d.setUTCDate(d.getUTCDate()-1)}return n;}

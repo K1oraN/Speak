@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "script_id": "8e45f8ea-721e-452b-b8e7-0249b0c9a656",
+  "language": "Inglês",
+  "level": "A2",
+  "scenario": "Restaurante",
+  "title": "Restaurante",
+  "description": "Prática de reserva, pedido e pagamento.",
+  "estimated_minutes": 10,
+  "steps": [
+    {
+      "id": "1",
+      "context": "Chegada",
+      "tutor_text": "Do you have a reservation?",
+      "tutor_translation_pt": "Você tem uma reserva?",
+      "tutor_pronunciation_pt": "Du iú rév a rezervêichan?",
+      "student_suggestion": "Yes, I have a reservation.",
+      "student_translation_pt": "Sim, tenho uma reserva.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "2",
+      "context": "Bebidas",
+      "tutor_text": "What would you like to drink?",
+      "tutor_translation_pt": "O que gostaria de beber?",
+      "tutor_pronunciation_pt": "Uót uúd iú láik tu drink?",
+      "student_suggestion": "I would like some water.",
+      "student_translation_pt": "Gostaria de água.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "3",
+      "context": "Pedido",
+      "tutor_text": "Are you ready to order?",
+      "tutor_translation_pt": "Está pronto para pedir?",
+      "tutor_pronunciation_pt": "Ar iú rédi tu órder?",
+      "student_suggestion": "Yes, I would like the soup.",
+      "student_translation_pt": "Sim, gostaria da sopa.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "4",
+      "context": "Complementos",
+      "tutor_text": "Would you like anything else?",
+      "tutor_translation_pt": "Gostaria de mais alguma coisa?",
+      "tutor_pronunciation_pt": "Uúd iú láik énithing éls?",
+      "student_suggestion": "No, thank you.",
+      "student_translation_pt": "Não, obrigado.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "5",
+      "context": "Refeição",
+      "tutor_text": "How was your meal?",
+      "tutor_translation_pt": "Como estava sua refeição?",
+      "tutor_pronunciation_pt": "Ráu uóz iór míl?",
+      "student_suggestion": "It was delicious.",
+      "student_translation_pt": "Estava deliciosa.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "6",
+      "context": "Pagamento",
+      "tutor_text": "Would you like the bill?",
+      "tutor_translation_pt": "Gostaria da conta?",
+      "tutor_pronunciation_pt": "Uúd iú láik de bil?",
+      "student_suggestion": "Yes, please.",
+      "student_translation_pt": "Sim, por favor.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    }
+  ],
+  "tutor_instructions": "Aceite respostas equivalentes; espere uma resposta antes de avançar."
+}

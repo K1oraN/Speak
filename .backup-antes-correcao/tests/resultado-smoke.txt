@@ -1,0 +1,100 @@
+
+> speakup@2.0.0 test:smoke
+> node --experimental-strip-types --test tests/smoke.mjs
+
+TAP version 13
+# (node:3233) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: primeiro turno não avança
+ok 1 - primeiro turno não avança
+  ---
+  duration_ms: 1.555094
+  type: 'test'
+  ...
+# Subtest: silêncio curto e retomada não avançam
+ok 2 - silêncio curto e retomada não avançam
+  ---
+  duration_ms: 0.307383
+  type: 'test'
+  ...
+# Subtest: silêncio longo entrega vez e retorno avança uma vez
+ok 3 - silêncio longo entrega vez e retorno avança uma vez
+  ---
+  duration_ms: 0.216937
+  type: 'test'
+  ...
+# Subtest: ruído curto não inicia turno
+ok 4 - ruído curto não inicia turno
+  ---
+  duration_ms: 0.148694
+  type: 'test'
+  ...
+# Subtest: explicação/livre não avançam
+ok 5 - explicação/livre não avançam
+  ---
+  duration_ms: 0.273141
+  type: 'test'
+  ...
+# Subtest: congelamento não avança
+ok 6 - congelamento não avança
+  ---
+  duration_ms: 0.189476
+  type: 'test'
+  ...
+# Subtest: pausa e fim não avançam
+ok 7 - pausa e fim não avançam
+  ---
+  duration_ms: 0.549448
+  type: 'test'
+  ...
+# Subtest: ressincronização preserva etapa
+ok 8 - ressincronização preserva etapa
+  ---
+  duration_ms: 0.164017
+  type: 'test'
+  ...
+# Subtest: retorno muito cedo não conta
+ok 9 - retorno muito cedo não conta
+  ---
+  duration_ms: 0.436638
+  type: 'test'
+  ...
+# Subtest: histerese exige silêncio contínuo
+ok 10 - histerese exige silêncio contínuo
+  ---
+  duration_ms: 1.596547
+  type: 'test'
+  ...
+# Subtest: limite de etapa
+ok 11 - limite de etapa
+  ---
+  duration_ms: 0.235104
+  type: 'test'
+  ...
+# Subtest: XP com limites diário e por sessão
+ok 12 - XP com limites diário e por sessão
+  ---
+  duration_ms: 0.090156
+  type: 'test'
+  ...
+# Subtest: média exclui nulos e não inventa zero
+ok 13 - média exclui nulos e não inventa zero
+  ---
+  duration_ms: 0.491811
+  type: 'test'
+  ...
+# Subtest: sequência por dia civil
+ok 14 - sequência por dia civil
+  ---
+  duration_ms: 12.51331
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 209.473018

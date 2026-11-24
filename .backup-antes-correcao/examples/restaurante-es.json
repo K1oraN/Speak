@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "script_id": "6a5e8166-a86c-4679-baa8-84c3348090ce",
+  "language": "Espanhol",
+  "level": "A2",
+  "scenario": "Restaurante",
+  "title": "Restaurante",
+  "description": "Prática de reserva, pedido e pagamento.",
+  "estimated_minutes": 10,
+  "steps": [
+    {
+      "id": "1",
+      "context": "Chegada",
+      "tutor_text": "¿Tiene una reserva?",
+      "tutor_translation_pt": "Você tem uma reserva?",
+      "tutor_pronunciation_pt": "Tiêne una resêrva?",
+      "student_suggestion": "Sí, tengo una reserva.",
+      "student_translation_pt": "Sim, tenho uma reserva.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "2",
+      "context": "Bebidas",
+      "tutor_text": "¿Qué desea beber?",
+      "tutor_translation_pt": "O que deseja beber?",
+      "tutor_pronunciation_pt": "Kê desêa bebêr?",
+      "student_suggestion": "Quisiera agua.",
+      "student_translation_pt": "Gostaria de água.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "3",
+      "context": "Pedido",
+      "tutor_text": "¿Está listo para pedir?",
+      "tutor_translation_pt": "Está pronto para pedir?",
+      "tutor_pronunciation_pt": "Está lísto para pedír?",
+      "student_suggestion": "Quisiera la sopa.",
+      "student_translation_pt": "Gostaria da sopa.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "4",
+      "context": "Complementos",
+      "tutor_text": "¿Algo más?",
+      "tutor_translation_pt": "Algo mais?",
+      "tutor_pronunciation_pt": "Álgo más?",
+      "student_suggestion": "No, gracias.",
+      "student_translation_pt": "Não, obrigado.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "5",
+      "context": "Refeição",
+      "tutor_text": "¿Qué tal la comida?",
+      "tutor_translation_pt": "Como estava a comida?",
+      "tutor_pronunciation_pt": "Kê tal la comída?",
+      "student_suggestion": "Muy buena.",
+      "student_translation_pt": "Muito boa.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    },
+    {
+      "id": "6",
+      "context": "Pagamento",
+      "tutor_text": "¿Quiere la cuenta?",
+      "tutor_translation_pt": "Quer a conta?",
+      "tutor_pronunciation_pt": "Kiêre la kuênta?",
+      "student_suggestion": "La cuenta, por favor.",
+      "student_translation_pt": "A conta, por favor.",
+      "student_pronunciation_pt": "",
+      "alternatives": []
+    }
+  ],
+  "tutor_instructions": "Aceite respostas equivalentes; espere uma resposta antes de avançar."
+}

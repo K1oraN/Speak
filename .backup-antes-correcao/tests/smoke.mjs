@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initialTurn,sampleTurn} from '../src/core/turns.ts';
+import {average,xpRule,streak,localDay} from '../src/core/stats.ts';
+const config={delayMs:1200,threshold:.02,guided:true,maxStep:5,frozen:false};
+function feed(t,start,end,rms,c=config){for(let i=start;i<=end;i+=50)t=sampleTurn(t,rms,i,c);return t}
+const talk=()=>feed(initialTurn(),0,400,.05);
+const wait=()=>feed(talk(),450,1800,0);
+test('primeiro turno não avança',()=>{const t=talk();assert.equal(t.phase,'tutor');assert.equal(t.step,0)});
+test('silêncio curto e retomada não avançam',()=>{let t=feed(talk(),450,900,0);assert.equal(t.phase,'candidate');t=feed(t,950,1300,.05);assert.equal(t.phase,'tutor');assert.equal(t.step,0)});
+test('silêncio longo entrega vez e retorno avança uma vez',()=>{let t=wait();assert.equal(t.phase,'student');t=feed(t,1850,2200,0);t=feed(t,2250,3200,.05);assert.equal(t.step,1);assert.equal(t.phase,'tutor')});
+test('ruído curto não inicia turno',()=>{let t=feed(initialTurn(),0,50,.05);t=feed(t,100,500,0);assert.equal(t.phase,'waiting')});
+test('explicação/livre não avançam',()=>{let t=feed(wait(),1850,2300,0);t=feed(t,2350,2800,.05,{...config,guided:false});assert.equal(t.step,0)});
+test('congelamento não avança',()=>{let t=feed(wait(),1850,2300,0);t=feed(t,2350,2800,.05,{...config,frozen:true});assert.equal(t.step,0)});
+test('pausa e fim não avançam',()=>{for(const phase of ['paused','ended']){const t={...wait(),phase};assert.deepEqual(feed(t,2000,3000,.1),t)}});
+test('ressincronização preserva etapa',()=>{const t=feed(initialTurn(2,2000),2000,2500,.05);assert.equal(t.step,2)});
+test('retorno muito cedo não conta',()=>{let t=wait();t=feed(t,1850,2000,.05);assert.equal(t.step,0)});
+test('histerese exige silêncio contínuo',()=>{let t=feed(talk(),450,1100,0);t=feed(t,1150,1200,.017);t=feed(t,1250,1800,0);assert.equal(t.phase,'candidate')});
+test('limite de etapa',()=>{let t={...wait(),step:5};t=feed(t,1850,2400,0);t=feed(t,2450,2800,.05);assert.equal(t.step,5)});
+test('XP com limites diário e por sessão',()=>{assert.equal(xpRule(600,6,0),62);assert.equal(xpRule(6000,100,0),100);assert.equal(xpRule(600,6,190),10);assert.equal(xpRule(60,1,200),0)});
+test('média exclui nulos e não inventa zero',()=>{assert.deepEqual(average([0,null,80]),{value:40,count:2,total:3});assert.equal(average([null]).value,null)});
+test('sequência por dia civil',()=>{assert.equal(streak(['2026-11-22','2026-11-23'],'2026-11-24'),2);assert.equal(localDay(new Date('2026-11-24T01:00:00Z'),'America/Maceio'),'2026-11-23')});

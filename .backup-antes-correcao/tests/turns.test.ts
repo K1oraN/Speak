@@ -1,0 +1,11 @@
+import {it,expect} from 'vitest';
+import {initialTurn,sampleTurn} from '../src/core/turns';
+import {average,xpRule,streak} from '../src/core/stats';
+import type {Turn} from '../src/core/turns';
+const config={delayMs:1200,threshold:.02,guided:true,maxStep:5,frozen:false};
+const feed=(t:Turn,start:number,end:number,rms:number,c=config)=>{for(let i=start;i<=end;i+=50)t=sampleTurn(t,rms,i,c);return t};
+it('primeira fala e pausa curta não pulam etapa',()=>{let t=feed(initialTurn(),0,400,.05);t=feed(t,450,900,0);t=feed(t,950,1400,.05);expect(t.step).toBe(0);expect(t.phase).toBe('tutor')});
+it('retorno válido avança uma vez',()=>{let t=feed(initialTurn(),0,400,.05);t=feed(t,450,2200,0);expect(t.phase).toBe('student');t=feed(t,2250,3200,.05);expect(t.step).toBe(1)});
+it('reconectar nunca pula',()=>expect(feed(initialTurn(2),0,600,.05).step).toBe(2));
+it('ruído transitório',()=>expect(feed(feed(initialTurn(),0,50,.05),100,400,0).phase).toBe('waiting'));
+it('XP e média',()=>{expect(xpRule(600,6,190)).toBe(10);expect(average([null,90]).value).toBe(90);expect(streak(['2026-11-23'],'2026-11-24')).toBe(1)});
